@@ -4,31 +4,43 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 
 const FilteredTabled = ({ data }) => {
   const rows = [
-    { id: 1, name: 'Gourav', age: 12 },
-    { id: 2, name: 'Geek', age: 43 },
-    { id: 3, name: 'Pranav', age: 41 },
-    { id: 4, name: 'Abhay', age: 34 },
-    { id: 5, name: 'Pranav', age: 73 },
-    { id: 6, name: 'Disha', age: 61 },
-    { id: 7, name: 'Raghav', age: 72 },
-    { id: 8, name: 'Amit', age: 24 },
-    { id: 9, name: 'Anuj', age: 48 },
+    { id: 1, name: 'Gourav', size: 12, quantity: 2 },
+    { id: 2, name: 'Geek', size: 43, quantity: 2 },
+    { id: 3, name: 'Pranav', size: 41, quantity: 2 },
+    { id: 4, name: 'Abhay', size: 34, quantity: 2 },
+    { id: 5, name: 'Pranav', size: 73, quantity: 2 },
+    { id: 6, name: 'Disha', size: 61, quantity: 2 },
+    { id: 7, name: 'Raghav', size: 72, quantity: 2 },
+    { id: 8, name: 'Amit', size: 24, quantity: 2 },
+    { id: 9, name: 'Anuj', size: 48, quantity: 2 },
   ]
   const columns = [
     {
       field: 'id',
       headerName: 'ID',
+      hide: true,
       // width: 170,
+      flex: 1,
+      // sortable: false,
     },
     {
       field: 'name',
       headerName: 'NAME',
       // width: 170,
+      flex: 1,
     },
     {
-      field: 'age',
-      headerName: 'AGE',
+      field: 'size',
+      headerName: 'SIZE',
       // width: 170,
+      flex: 1,
+    },
+    {
+      field: 'quantity',
+      headerName: 'QUANTITY',
+      // width: 170,
+      flex: 1,
+      editable: true,
     },
   ]
 
@@ -52,6 +64,7 @@ const FilteredTabled = ({ data }) => {
         disableColumnFilter
         disableColumnSelector
         disableDensitySelector
+        experimentalFeatures={{ newEditingApi: true }}
         components={{ Toolbar: GridToolbar }}
         componentsProps={{
           toolbar: {
