@@ -41,6 +41,7 @@ const FilteredTabled = ({ data }) => {
       // width: 170,
       flex: 1,
       editable: true,
+      type: 'number',
     },
   ]
 
