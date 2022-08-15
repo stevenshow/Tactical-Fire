@@ -10,13 +10,13 @@ function App() {
       <header className='App-header'>
         <h1>Tactical Fire</h1>
         <BasicCard name='Boots'>
-          <SimpleAccordion name='Boots'>
+          <SimpleAccordion>
             <FilteredTable name='Hiking' />
             <FilteredTable name='Work' />
           </SimpleAccordion>
         </BasicCard>
         <BasicCard name='Pants'>
-          <SimpleAccordion name='Pants'>
+          <SimpleAccordion>
             <FilteredTable name='Hiking' />
             <FilteredTable name='Work' />
           </SimpleAccordion>
