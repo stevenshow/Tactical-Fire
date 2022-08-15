@@ -1,18 +1,23 @@
 import * as React from 'react'
-import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-// import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
-// import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
-export default function BasicCard({ children }) {
+export default function BasicCard({ children, name }) {
   return (
-    <Card sx={{ minWidth: '60%' }}>
-      <Typography sx={{ marginTop: '2%' }}>
-        <h2>Product Type?</h2>
-      </Typography>
-      <CardContent sx={{ minWidth: '90%' }}>{children}</CardContent>
-    </Card>
+    <>
+      <Card
+        sx={{
+          minWidth: '60%',
+          marginBottom: '2%',
+          backgroundColor: 'lightgray',
+        }}
+      >
+        <Typography variant='h4' component='div' sx={{ marginTop: '2%' }}>
+          {name}
+        </Typography>
+        <CardContent sx={{ minWidth: '90%' }}>{children}</CardContent>
+      </Card>
+    </>
   )
 }
